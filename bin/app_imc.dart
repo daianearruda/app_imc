@@ -1,10 +1,13 @@
 import 'package:app_imc/app_imc.dart' as app_imc;
+import 'package:app_imc/classes/pessoa.dart';
 
 void main(List<String> arguments) {
-  double peso= 100;
-  double altura= 1.70;
+  Pessoa pessoa=Pessoa();
+  pessoa.setNome("Daiane");
+  pessoa.setPeso(70);
+  pessoa.setAltura(1.70);
 
-  double imc = app_imc.calcularImc(peso, altura);
+  double imc = app_imc.calcularImc(pessoa.getPeso(), pessoa.getAltura());
 
    if (imc < 16) {
     print("Magreza grave");
